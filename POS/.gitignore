@@ -1,0 +1,15 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+obj/
+bin/
+
+# NuGet
+*.nuget.cache
+project.assets.json
+*.dgspec.json
