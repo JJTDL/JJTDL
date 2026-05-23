@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
-            button1 = new Button();
+            btnCancel = new Button();
+            btnSignUp = new Button();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             label2 = new Label();
@@ -42,23 +42,23 @@
             label6 = new Label();
             SuspendLayout();
             // 
-            // button2
+            // btnCancel
             // 
-            button2.Location = new Point(167, 256);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 11;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnCancel.Location = new Point(167, 256);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(75, 23);
+            btnCancel.TabIndex = 11;
+            btnCancel.Text = "button2";
+            btnCancel.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnSignUp
             // 
-            button1.Location = new Point(48, 256);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 10;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnSignUp.Location = new Point(48, 256);
+            btnSignUp.Name = "btnSignUp";
+            btnSignUp.Size = new Size(75, 23);
+            btnSignUp.TabIndex = 10;
+            btnSignUp.Text = "button1";
+            btnSignUp.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -151,8 +151,8 @@
             Controls.Add(textBox4);
             Controls.Add(label3);
             Controls.Add(label4);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnCancel);
+            Controls.Add(btnSignUp);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label2);
@@ -165,8 +165,8 @@
 
         #endregion
 
-        private Button button2;
-        private Button button1;
+        private Button btnCancel;
+        private Button btnSignUp;
         private TextBox textBox2;
         private TextBox textBox1;
         private Label label2;

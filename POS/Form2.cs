@@ -13,19 +13,37 @@ namespace POS
     public partial class FrontPanel : Form
     {
         string username;
-        public FrontPanel(string username)
+        public FrontPanel()
         {
             InitializeComponent();
         }
 
         private void btnSellAnItem_Click(object sender, EventArgs e)
         {
-
+            Salebox sale = new Salebox(username);
+            sale.Show();
         }
 
         private void FrontPanel_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCheckStock_Click(object sender, EventArgs e)
+        {
+            Check_Stock sale = new Check_Stock();
+            sale.Show();
+        }
+
+        private void btnAddStock_Click(object sender, EventArgs e)
+        {
+            ReceiveStock sale = new ReceiveStock();
+            sale.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

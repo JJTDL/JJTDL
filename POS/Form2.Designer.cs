@@ -54,6 +54,7 @@
             btnCheckStock.TabIndex = 1;
             btnCheckStock.Text = "Check Stock";
             btnCheckStock.UseVisualStyleBackColor = true;
+            btnCheckStock.Click += btnCheckStock_Click;
             // 
             // btnDailyTransaction
             // 
@@ -81,6 +82,7 @@
             btnAddStock.TabIndex = 5;
             btnAddStock.Text = "Add Stock";
             btnAddStock.UseVisualStyleBackColor = true;
+            btnAddStock.Click += btnAddStock_Click;
             // 
             // button3
             // 
@@ -90,6 +92,7 @@
             button3.TabIndex = 6;
             button3.Text = "Exit";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // FrontPanel
             // 
@@ -103,7 +106,7 @@
             Controls.Add(btnCheckStock);
             Controls.Add(btnSellAnItem);
             Name = "FrontPanel";
-            Text = "Form2";
+            Text = "Home Form";
             Load += FrontPanel_Load;
             ResumeLayout(false);
         }
