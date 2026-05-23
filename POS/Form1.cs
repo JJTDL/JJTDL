@@ -5,7 +5,7 @@ namespace POS
 {
     public partial class Form1 : Form
     {
-        string username,password;
+        string username, password;
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace POS
                 if (dt1.Rows.Count == 1)
                 {
                     username = UserNameBox.Text.TrimEnd();
-                    FrontPanel pan1 = new FrontPanel(username);
+                    FrontPanel pan1 = new FrontPanel();
                     this.Hide();
                     pan1.Show();
                 }
@@ -48,6 +48,11 @@ namespace POS
             {
                 MessageBox.Show("Wrong UserName and Password");
             }
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }

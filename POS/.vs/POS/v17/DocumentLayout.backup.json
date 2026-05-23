@@ -1,57 +1,97 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "T:\\POS\\POS\\",
+  "WorkspaceRootPath": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|t:\\pos\\pos\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|t:\\pos\\pos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|t:\\pos\\pos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|t:\\pos\\pos\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\receivestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:receivestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|t:\\pos\\pos\\salebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:salebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|t:\\pos\\pos\\dailytransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:dailytransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|t:\\pos\\pos\\bankingpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:bankingpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|t:\\pos\\pos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|t:\\pos\\pos\\salebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\salebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:salebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|t:\\pos\\pos\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\salebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:salebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|t:\\pos\\pos\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\dailytransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:dailytransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\salebox.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:salebox.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\check stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:check stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\salebox.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:salebox.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\bankingpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:bankingpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\receivestock.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:receivestock.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\check stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:check stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\receivestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:receivestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\cstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:cstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\pos.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:pos.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|t:\\pos\\pos\\registration.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\registration.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:registration.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|t:\\pos\\pos\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|c:\\users\\student\\documents\\jjtdl\\jjtdl\\pos\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B2E4FEA-64BD-419C-9192-47BE34DDAD6F}|POS.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -62,65 +102,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "T:\\POS\\POS\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "T:\\POS\\POS\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAywCgAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T08:05:31.267Z",
+              "WhenOpened": "2026-05-23T07:39:47.721Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Salebox.cs [Design]",
-              "DocumentMoniker": "T:\\POS\\POS\\Salebox.cs",
-              "RelativeDocumentMoniker": "Salebox.cs",
-              "ToolTip": "T:\\POS\\POS\\Salebox.cs [Design]",
-              "RelativeToolTip": "Salebox.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T07:59:14.458Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Salebox.cs",
-              "DocumentMoniker": "T:\\POS\\POS\\Salebox.cs",
-              "RelativeDocumentMoniker": "Salebox.cs",
-              "ToolTip": "T:\\POS\\POS\\Salebox.cs",
-              "RelativeToolTip": "Salebox.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T08:00:30.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DailyTransaction.cs [Design]",
-              "DocumentMoniker": "T:\\POS\\POS\\DailyTransaction.cs",
-              "RelativeDocumentMoniker": "DailyTransaction.cs",
-              "ToolTip": "T:\\POS\\POS\\DailyTransaction.cs [Design]",
-              "RelativeToolTip": "DailyTransaction.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T07:57:56.506Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form2.cs [Design]",
-              "DocumentMoniker": "T:\\POS\\POS\\Form2.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
-              "ToolTip": "T:\\POS\\POS\\Form2.cs [Design]",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Form2.cs [Design]",
               "RelativeToolTip": "Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T07:40:18.869Z",
@@ -128,24 +135,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Form2.cs",
-              "DocumentMoniker": "T:\\POS\\POS\\Form2.cs",
-              "RelativeDocumentMoniker": "Form2.cs",
-              "ToolTip": "T:\\POS\\POS\\Form2.cs",
-              "RelativeToolTip": "Form2.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Salebox.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Salebox.cs",
+              "RelativeDocumentMoniker": "Salebox.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Salebox.cs",
+              "RelativeToolTip": "Salebox.cs",
+              "ViewState": "AgIAAEwBAAAAAAAAAAAQwBcCAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T07:58:58.389Z",
+              "WhenOpened": "2026-05-23T08:00:30.3Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
+              "Title": "DailyTransaction.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\DailyTransaction.cs",
+              "RelativeDocumentMoniker": "DailyTransaction.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\DailyTransaction.cs [Design]",
+              "RelativeToolTip": "DailyTransaction.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T09:15:00.471Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "T:\\POS\\POS\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "T:\\POS\\POS\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T07:08:09.228Z",
@@ -153,11 +172,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "ReceiveStock.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\ReceiveStock.cs",
+              "RelativeDocumentMoniker": "ReceiveStock.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\ReceiveStock.cs [Design]",
+              "RelativeToolTip": "ReceiveStock.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T09:37:00.566Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Registration.cs [Design]",
-              "DocumentMoniker": "T:\\POS\\POS\\Registration.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Registration.cs",
               "RelativeDocumentMoniker": "Registration.cs",
-              "ToolTip": "T:\\POS\\POS\\Registration.cs [Design]",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Registration.cs [Design]",
               "RelativeToolTip": "Registration.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T07:38:11.153Z",
@@ -165,41 +196,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "T:\\POS\\POS\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "T:\\POS\\POS\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T07:39:47.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Bankingpanel.cs [Design]",
-              "DocumentMoniker": "T:\\POS\\POS\\Bankingpanel.cs",
-              "RelativeDocumentMoniker": "Bankingpanel.cs",
-              "ToolTip": "T:\\POS\\POS\\Bankingpanel.cs [Design]",
-              "RelativeToolTip": "Bankingpanel.cs [Design]",
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Form2.cs",
+              "RelativeToolTip": "Form2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T07:43:13.338Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-23T07:58:58.389Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Form2.Designer.cs",
-              "DocumentMoniker": "T:\\POS\\POS\\Form2.Designer.cs",
-              "RelativeDocumentMoniker": "Form2.Designer.cs",
-              "ToolTip": "T:\\POS\\POS\\Form2.Designer.cs",
-              "RelativeToolTip": "Form2.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Salebox.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Salebox.cs",
+              "RelativeDocumentMoniker": "Salebox.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Salebox.cs [Design]",
+              "RelativeToolTip": "Salebox.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T07:51:46.697Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T11:26:23.087Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Bookmark",
@@ -207,11 +225,154 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Salebox.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Salebox.Designer.cs",
+              "RelativeDocumentMoniker": "Salebox.Designer.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Salebox.Designer.cs",
+              "RelativeToolTip": "Salebox.Designer.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAtwGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T11:25:47.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Check Stock.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Check Stock.cs",
+              "RelativeDocumentMoniker": "Check Stock.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Check Stock.cs [Design]",
+              "RelativeToolTip": "Check Stock.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T10:18:01.008Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "Salebox.resx",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Salebox.resx",
+              "RelativeDocumentMoniker": "Salebox.resx",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Salebox.resx",
+              "RelativeToolTip": "Salebox.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-05-23T11:26:03.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Bankingpanel.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Bankingpanel.cs",
+              "RelativeDocumentMoniker": "Bankingpanel.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Bankingpanel.cs [Design]",
+              "RelativeToolTip": "Bankingpanel.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T07:43:13.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ReceiveStock.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\ReceiveStock.Designer.cs",
+              "RelativeDocumentMoniker": "ReceiveStock.Designer.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\ReceiveStock.Designer.cs",
+              "RelativeToolTip": "ReceiveStock.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T10:34:51.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Check Stock.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Check Stock.cs",
+              "RelativeDocumentMoniker": "Check Stock.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Check Stock.cs",
+              "RelativeToolTip": "Check Stock.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAA0wD4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T10:18:57.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ReceiveStock.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\ReceiveStock.cs",
+              "RelativeDocumentMoniker": "ReceiveStock.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\ReceiveStock.cs",
+              "RelativeToolTip": "ReceiveStock.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T09:38:51.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CStock.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\CStock.cs",
+              "RelativeDocumentMoniker": "CStock.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\CStock.cs",
+              "RelativeToolTip": "CStock.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T09:47:46.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAADgvyMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T08:05:31.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Settings.settings",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Properties\\Settings.settings",
+              "RelativeDocumentMoniker": "Properties\\Settings.settings",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Properties\\Settings.settings",
+              "RelativeToolTip": "Properties\\Settings.settings",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
+              "WhenOpened": "2026-05-23T08:45:16.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "POS",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\POS.csproj",
+              "RelativeDocumentMoniker": "POS.csproj",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\POS.csproj",
+              "RelativeToolTip": "POS.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-23T08:42:51.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Form2.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Form2.Designer.cs",
+              "RelativeDocumentMoniker": "Form2.Designer.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Form2.Designer.cs",
+              "RelativeToolTip": "Form2.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T07:51:46.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "Registration.Designer.cs",
-              "DocumentMoniker": "T:\\POS\\POS\\Registration.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Registration.Designer.cs",
               "RelativeDocumentMoniker": "Registration.Designer.cs",
-              "ToolTip": "T:\\POS\\POS\\Registration.Designer.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Registration.Designer.cs",
               "RelativeToolTip": "Registration.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -220,11 +381,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "T:\\POS\\POS\\Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "T:\\POS\\POS\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\Form1.Designer.cs",
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
