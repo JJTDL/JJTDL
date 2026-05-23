@@ -7,7 +7,7 @@
 ## 📌 Project Overview
 Millions of South Africans engage in informal economic activities—running spaza shops, hawking, or operating taxi routes. They rely heavily on cash transactions due to high banking fees, complex apps, and costly data. 
 
-**Umvula** (meaning *"The Opener"* in Zulu) is a robust, low-overhead **C# Windows Forms (WinForms) Point of Sale (POS) & Operational Application** backed by **SQL Server**. It acts as a dual-sided architecture: meeting informal traders exactly where they are with a zero-data, lightning-fast cash ledger, while providing bank staff with a high-fidelity desktop engine for compliant underwriting and automated FICA onboarding.
+**Umvula** (meaning *"The Opener"* in Zulu) is a robust, low-overhead blended **C# Windows Forms (WinForms) Point of Sale (POS) & Operational Application** backed by **SQL Server**. It acts as a dual-sided architecture: meeting informal traders exactly where they are with a zero-data, lightning-fast cash ledger, while providing bank staff with a high-fidelity desktop engine for compliant underwriting and automated FICA onboarding.
 
 ### 🔗 Repository
 * **GitHub:** [https://github.com/JJTDL/JJTDL.git](https://github.com/JJTDL/JJTDL.git)
