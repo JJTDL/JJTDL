@@ -124,6 +124,7 @@
             // 
             // frmLogin
             // 
+            AcceptButton = btnSubmit;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background_image;
@@ -138,6 +139,7 @@
             Controls.Add(btnShowPass);
             Controls.Add(label1);
             Name = "frmLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmLogin";
             FormClosed += frmLogin_FormClosed;
             Load += frmLogin_Load;

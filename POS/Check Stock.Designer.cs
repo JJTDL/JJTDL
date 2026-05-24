@@ -98,6 +98,7 @@
             ForeColor = SystemColors.ActiveCaptionText;
             Margin = new Padding(3, 5, 3, 5);
             Name = "Check_Stock";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Check_Stock";
             Load += Check_Stock_Load;
             ((System.ComponentModel.ISupportInitialize)grdvStock).EndInit();

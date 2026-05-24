@@ -122,6 +122,7 @@
             Controls.Add(label2);
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Main";
             FormClosed += frmMain_FormClosed;
             ((System.ComponentModel.ISupportInitialize)picBxLogo).EndInit();

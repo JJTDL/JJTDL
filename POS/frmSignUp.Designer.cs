@@ -222,6 +222,7 @@
             // 
             // frmSignUp
             // 
+            AcceptButton = btnSubmit;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background_image;
@@ -244,6 +245,7 @@
             Controls.Add(lblStudNum);
             Controls.Add(btnShowPass);
             Name = "frmSignUp";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmSignUp";
             FormClosed += frmSignUp_FormClosed;
             ResumeLayout(false);

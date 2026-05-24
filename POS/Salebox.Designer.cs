@@ -111,6 +111,7 @@
             // 
             // Salebox
             // 
+            AcceptButton = btnSell;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background_image;
@@ -124,6 +125,7 @@
             Controls.Add(grdvStock);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Salebox";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Salebox";
             Load += Salebox_Load;
             ((System.ComponentModel.ISupportInitialize)grdvStock).EndInit();

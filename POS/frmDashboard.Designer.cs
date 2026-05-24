@@ -97,6 +97,7 @@
             Controls.Add(btnSellAnItem);
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmDashboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Home Form";
             ResumeLayout(false);
         }

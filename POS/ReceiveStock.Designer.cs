@@ -252,6 +252,7 @@
             // 
             // ReceiveStock
             // 
+            AcceptButton = btnAdd;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background_image;
@@ -277,6 +278,7 @@
             Controls.Add(label1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "ReceiveStock";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ReceiveStock";
             Load += ReceiveStock_Load;
             ResumeLayout(false);
