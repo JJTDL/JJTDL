@@ -1,1 +1,11 @@
- 
+# build folders
+bin/
+obj/
+
+# visual Studio files
+.vs/
+*.user
+*.suo
+
+#ublish folders
+publish/
