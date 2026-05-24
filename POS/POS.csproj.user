@@ -1,16 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
-<<<<<<< HEAD
-=======
-    <Compile Update="Bankingpanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Check Stock.cs">
       <SubType>Form</SubType>
     </Compile>
->>>>>>> f538acf27028ff1de36334b1b0f5032eea349ade
-    <Compile Update="DailyTransaction.cs">
+    <Compile Update="frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmLogin.cs">
@@ -19,20 +14,13 @@
     <Compile Update="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-<<<<<<< HEAD
     <Compile Update="frmRecover.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmSignUp.cs">
-=======
-    <Compile Update="ReceiveStock.cs">
->>>>>>> f538acf27028ff1de36334b1b0f5032eea349ade
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Registration.cs">
+    <Compile Update="ReceiveStock.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Salebox.cs">

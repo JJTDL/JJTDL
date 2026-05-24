@@ -13,60 +13,103 @@ namespace POS
 {
     public partial class Check_Stock : Form
     {
-        DataSet stock = new DataSet();
+        private DataTable stockTable = new DataTable();
+        private readonly string connectionString = "Server=DESKTOP-FFRLTTD\\SQLEXPRESS; Initial Catalog=LoginSystem; Integrated Security=true";
+
         public Check_Stock()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+         private void Check_Stock_Load(object sender, EventArgs e)
         {
-            this.Close();
+            textBox1.Text = "Search by item description...";
+            textBox1.ForeColor = Color.Gray;
+
+            textBox1.GotFocus += (s, ev) =>
+            {
+                if (textBox1.Text == "Search by item description...")
+                {
+                    textBox1.Text = "";
+                    textBox1.ForeColor = Color.White;
+                }
+            };
+
+            textBox1.LostFocus += (s, ev) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBox1.Text))
+                {
+                    textBox1.Text = "Search by item description...";
+                    textBox1.ForeColor = Color.Gray;
+                }
+            };
+
+            LoadInventoryData(null);
+        }
+      private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Search by item description...") return;
+            LoadInventoryData(textBox1.Text);
         }
 
-        private void Check_Stock_Load(object sender, EventArgs e)
+        private void LoadInventoryData(string searchTerm)
         {
-            LoadInventoryData();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            DataView d1 = new DataView(stock.Tables["details"]);
-            d1.RowFilter = string.Format("Stock_Description LIKE '%{0}%'", textBox1.Text);
-            grdvStock.DataSource = d1;
-        }
-        private void LoadInventoryData()
-        {
-            // 1. Define your connection string (update with your actual server credentials)
-            string connectionString = "Server=agrib_a8; Initial Catalog=LoginSystem; Integrated Security = true";
-
-            // 2. Write the SQL query to pull the form data
-            // string query = @"select * from Stock";
-            string query = "select [StockId] As ID     ,[Supplier]      ,[Invoice_no] as Invoice_Num     ,[Item_description] as Item_Description      ,[quantity_received] as Qty_Received\r\n      ,[cost_exc_vat] as Cost_Exc_Vat     ,[cost_inc_vat] as Cost_Inc_vat\r\n      ,[margin] as Margin\r\n      ,[mark_up] as Mark_up\r\n      ,[selling_exc_vat] as Selling_Exc_Vat    ,[selling_inc_vat] as Selling_Inc_Vat FROM [LoginSystem].[dbo].[Stock]";
-            // 3. Establish connection and fetch data using a 'using' block to cleanly close resources
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
-                    // Use a DataAdapter to execute the query and manage the connection
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    SqlCommand cmd = new SqlCommand("sp_GetStock", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@SearchTerm",
+                        string.IsNullOrWhiteSpace(searchTerm) ? (object)DBNull.Value : searchTerm);
+                    cmd.Parameters.AddWithValue("@LowStockThreshold", 10);
 
-                    // Create an in-memory table to hold the results
-                    DataTable dataTable = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    stockTable = new DataTable();
+                    adapter.Fill(stockTable);
+                    grdvStock.DataSource = stockTable;
 
-                    // Fill the DataTable with the database records
-                    adapter.Fill(dataTable);
-
-                    // 4. Bind the data table straight to your DataGridView UI component
-                    grdvStock.DataSource = dataTable;
+                    // Highlight low stock rows in red — only if the column exists
+                    if (grdvStock.Columns.Contains("Stock_Status"))
+                    {
+                        foreach (DataGridViewRow row in grdvStock.Rows)
+                        {
+                            var status = row.Cells["Stock_Status"].Value?.ToString();
+                            if (string.Equals(status, "LOW STOCK", StringComparison.OrdinalIgnoreCase))
+                            {
+                                row.DefaultCellStyle.BackColor = Color.FromArgb(80, 20, 20);
+                                row.DefaultCellStyle.ForeColor = Color.FromArgb(255, 100, 100);
+                            }
+                            else if (string.Equals(status, "OUT OF STOCK", StringComparison.OrdinalIgnoreCase))
+                            {
+                                // optional: visually distinguish out-of-stock
+                                row.DefaultCellStyle.BackColor = Color.Gray;
+                                row.DefaultCellStyle.ForeColor = Color.White;
+                            }
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
-                    // Helpful if something snaps (like a typo in the connection string)
-                    MessageBox.Show($"Oops! Something went wrong loading the data: {ex.Message}",
-                                    "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Error loading data: {ex.Message}",
+                        "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+       public void ShowFormAndCloseThis(Form nextForm)
+        {
+            Program.SwitchTo(nextForm, this);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            ShowFormAndCloseThis(new frmDashboard(""));
+        }
+
+        private void Check_Stock_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }

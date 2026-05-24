@@ -30,44 +30,73 @@
         {
             grdvStock = new DataGridView();
             textBox1 = new TextBox();
-            extbtn = new Button();
+            btnExit = new Button();
+            lblSearch = new Label();
             ((System.ComponentModel.ISupportInitialize)grdvStock).BeginInit();
             SuspendLayout();
             // 
             // grdvStock
             // 
+            grdvStock.BackgroundColor = SystemColors.ActiveCaption;
             grdvStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grdvStock.Location = new Point(32, 65);
+            grdvStock.Location = new Point(42, 100);
+            grdvStock.Margin = new Padding(3, 5, 3, 5);
             grdvStock.Name = "grdvStock";
-            grdvStock.Size = new Size(734, 331);
+            grdvStock.RowHeadersWidth = 51;
+            grdvStock.Size = new Size(627, 223);
             grdvStock.TabIndex = 0;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(32, 26);
+            textBox1.BackColor = SystemColors.ActiveCaption;
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.ForeColor = Color.White;
+            textBox1.Location = new Point(42, 40);
+            textBox1.Margin = new Padding(3, 5, 3, 5);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(673, 23);
+            textBox1.Size = new Size(627, 30);
             textBox1.TabIndex = 1;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // extbtn
+            // btnExit
             // 
-            extbtn.Location = new Point(704, 416);
-            extbtn.Name = "extbtn";
-            extbtn.Size = new Size(75, 23);
-            extbtn.TabIndex = 2;
-            extbtn.Text = "Exit";
-            extbtn.UseVisualStyleBackColor = true;
-            extbtn.Click += button1_Click;
+            btnExit.BackColor = SystemColors.ActiveCaption;
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Location = new Point(572, 349);
+            btnExit.Margin = new Padding(3, 5, 3, 5);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(97, 36);
+            btnExit.TabIndex = 2;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
+            // 
+            // lblSearch
+            // 
+            lblSearch.AutoSize = true;
+            lblSearch.BackColor = SystemColors.ActiveCaptionText;
+            lblSearch.ForeColor = SystemColors.ControlLightLight;
+            lblSearch.Location = new Point(42, 12);
+            lblSearch.Name = "lblSearch";
+            lblSearch.Size = new Size(131, 23);
+            lblSearch.TabIndex = 6;
+            lblSearch.Text = "Search for Item:";
             // 
             // Check_Stock
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(extbtn);
+            BackColor = Color.WhiteSmoke;
+            BackgroundImage = Properties.Resources.Background_image;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(691, 397);
+            Controls.Add(lblSearch);
+            Controls.Add(btnExit);
             Controls.Add(textBox1);
             Controls.Add(grdvStock);
+            Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ForeColor = SystemColors.ActiveCaptionText;
+            Margin = new Padding(3, 5, 3, 5);
             Name = "Check_Stock";
             Text = "Check_Stock";
             Load += Check_Stock_Load;
@@ -80,6 +109,7 @@
 
         private DataGridView grdvStock;
         private TextBox textBox1;
-        private Button extbtn;
+        private Button btnExit;
+        private Label lblSearch;
     }
 }

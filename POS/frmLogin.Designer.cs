@@ -35,6 +35,7 @@
             lblPass = new Label();
             lblStudNum = new Label();
             txtUserName = new TextBox();
+            btnBack = new Button();
             SuspendLayout();
             // 
             // label1
@@ -50,9 +51,9 @@
             btnShowPass.BackColor = SystemColors.ActiveCaption;
             btnShowPass.FlatStyle = FlatStyle.Flat;
             btnShowPass.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnShowPass.Location = new Point(13, 364);
+            btnShowPass.Location = new Point(271, 133);
             btnShowPass.Name = "btnShowPass";
-            btnShowPass.Size = new Size(260, 48);
+            btnShowPass.Size = new Size(223, 37);
             btnShowPass.TabIndex = 1;
             btnShowPass.Text = "Show/Hide Password";
             btnShowPass.UseVisualStyleBackColor = false;
@@ -63,9 +64,9 @@
             btnSubmit.BackColor = SystemColors.ActiveCaption;
             btnSubmit.FlatStyle = FlatStyle.Flat;
             btnSubmit.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSubmit.Location = new Point(359, 364);
+            btnSubmit.Location = new Point(377, 78);
             btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(132, 48);
+            btnSubmit.Size = new Size(114, 37);
             btnSubmit.TabIndex = 2;
             btnSubmit.Text = "&Submit";
             btnSubmit.UseVisualStyleBackColor = false;
@@ -73,16 +74,18 @@
             // 
             // txtPass
             // 
-            txtPass.Location = new Point(13, 316);
+            txtPass.Location = new Point(19, 143);
             txtPass.Name = "txtPass";
-            txtPass.Size = new Size(260, 27);
+            txtPass.Size = new Size(222, 27);
             txtPass.TabIndex = 3;
-            txtPass.TextChanged += txtPass_TextChanged;
+            txtPass.UseSystemPasswordChar = true;
             // 
             // lblPass
             // 
             lblPass.AutoSize = true;
-            lblPass.Location = new Point(12, 293);
+            lblPass.BackColor = SystemColors.ActiveCaptionText;
+            lblPass.ForeColor = SystemColors.ControlLightLight;
+            lblPass.Location = new Point(19, 106);
             lblPass.Name = "lblPass";
             lblPass.Size = new Size(189, 20);
             lblPass.TabIndex = 4;
@@ -91,7 +94,9 @@
             // lblStudNum
             // 
             lblStudNum.AutoSize = true;
-            lblStudNum.Location = new Point(13, 230);
+            lblStudNum.BackColor = SystemColors.ActiveCaptionText;
+            lblStudNum.ForeColor = SystemColors.ControlLightLight;
+            lblStudNum.Location = new Point(19, 20);
             lblStudNum.Name = "lblStudNum";
             lblStudNum.Size = new Size(193, 20);
             lblStudNum.TabIndex = 5;
@@ -99,16 +104,32 @@
             // 
             // txtUserName
             // 
-            txtUserName.Location = new Point(12, 263);
+            txtUserName.Location = new Point(19, 53);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(261, 27);
+            txtUserName.Size = new Size(222, 27);
             txtUserName.TabIndex = 6;
+            // 
+            // btnBack
+            // 
+            btnBack.BackColor = SystemColors.ActiveCaption;
+            btnBack.FlatStyle = FlatStyle.Flat;
+            btnBack.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBack.Location = new Point(377, 11);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(114, 41);
+            btnBack.TabIndex = 7;
+            btnBack.Text = "&Back";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click_1;
             // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(503, 434);
+            BackgroundImage = Properties.Resources.Background_image;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(503, 199);
+            Controls.Add(btnBack);
             Controls.Add(txtUserName);
             Controls.Add(lblStudNum);
             Controls.Add(lblPass);
@@ -133,5 +154,6 @@
         private Label lblPass;
         private Label lblStudNum;
         private TextBox txtUserName;
+        private Button btnBack;
     }
 }

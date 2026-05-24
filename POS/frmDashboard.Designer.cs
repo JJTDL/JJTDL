@@ -1,6 +1,6 @@
 ﻿namespace POS
 {
-    partial class FrontPanel
+    partial class frmDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -30,84 +30,74 @@
         {
             btnSellAnItem = new Button();
             btnCheckStock = new Button();
-            btnDailyTransaction = new Button();
-            btnMonthlyTransaction = new Button();
             btnAddStock = new Button();
-            button3 = new Button();
+            btnExit = new Button();
             SuspendLayout();
             // 
             // btnSellAnItem
             // 
-            btnSellAnItem.Location = new Point(22, 25);
+            btnSellAnItem.BackColor = SystemColors.ActiveCaption;
+            btnSellAnItem.FlatStyle = FlatStyle.Flat;
+            btnSellAnItem.Location = new Point(25, 33);
+            btnSellAnItem.Margin = new Padding(3, 4, 3, 4);
             btnSellAnItem.Name = "btnSellAnItem";
-            btnSellAnItem.Size = new Size(75, 50);
+            btnSellAnItem.Size = new Size(153, 44);
             btnSellAnItem.TabIndex = 0;
             btnSellAnItem.Text = "Sell An Item";
-            btnSellAnItem.UseVisualStyleBackColor = true;
+            btnSellAnItem.UseVisualStyleBackColor = false;
             btnSellAnItem.Click += btnSellAnItem_Click;
             // 
             // btnCheckStock
             // 
-            btnCheckStock.Location = new Point(117, 25);
+            btnCheckStock.FlatStyle = FlatStyle.Flat;
+            btnCheckStock.Location = new Point(25, 137);
+            btnCheckStock.Margin = new Padding(3, 4, 3, 4);
             btnCheckStock.Name = "btnCheckStock";
-            btnCheckStock.Size = new Size(75, 50);
+            btnCheckStock.Size = new Size(153, 48);
             btnCheckStock.TabIndex = 1;
             btnCheckStock.Text = "Check Stock";
             btnCheckStock.UseVisualStyleBackColor = true;
             btnCheckStock.Click += btnCheckStock_Click;
             // 
-            // btnDailyTransaction
-            // 
-            btnDailyTransaction.Location = new Point(210, 25);
-            btnDailyTransaction.Name = "btnDailyTransaction";
-            btnDailyTransaction.Size = new Size(79, 50);
-            btnDailyTransaction.TabIndex = 3;
-            btnDailyTransaction.Text = "Daily Transactions";
-            btnDailyTransaction.UseVisualStyleBackColor = true;
-            // 
-            // btnMonthlyTransaction
-            // 
-            btnMonthlyTransaction.Location = new Point(304, 25);
-            btnMonthlyTransaction.Name = "btnMonthlyTransaction";
-            btnMonthlyTransaction.Size = new Size(77, 50);
-            btnMonthlyTransaction.TabIndex = 4;
-            btnMonthlyTransaction.Text = "Monthly Transactions";
-            btnMonthlyTransaction.UseVisualStyleBackColor = true;
-            // 
             // btnAddStock
             // 
-            btnAddStock.Location = new Point(22, 90);
+            btnAddStock.FlatStyle = FlatStyle.Flat;
+            btnAddStock.Location = new Point(25, 85);
+            btnAddStock.Margin = new Padding(3, 4, 3, 4);
             btnAddStock.Name = "btnAddStock";
-            btnAddStock.Size = new Size(65, 46);
+            btnAddStock.Size = new Size(153, 44);
             btnAddStock.TabIndex = 5;
             btnAddStock.Text = "Add Stock";
             btnAddStock.UseVisualStyleBackColor = true;
             btnAddStock.Click += btnAddStock_Click;
             // 
-            // button3
+            // btnExit
             // 
-            button3.Location = new Point(378, 214);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 6;
-            button3.Text = "Exit";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Location = new Point(194, 154);
+            btnExit.Margin = new Padding(3, 4, 3, 4);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(86, 31);
+            btnExit.TabIndex = 6;
+            btnExit.Text = "&Exit";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
-            // FrontPanel
+            // frmDashboard
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(483, 261);
-            Controls.Add(button3);
+            BackColor = SystemColors.ActiveCaption;
+            BackgroundImage = Properties.Resources.Background_image;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(295, 201);
+            Controls.Add(btnExit);
             Controls.Add(btnAddStock);
-            Controls.Add(btnMonthlyTransaction);
-            Controls.Add(btnDailyTransaction);
             Controls.Add(btnCheckStock);
             Controls.Add(btnSellAnItem);
-            Name = "FrontPanel";
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "frmDashboard";
             Text = "Home Form";
-            Load += FrontPanel_Load;
             ResumeLayout(false);
         }
 
@@ -118,6 +108,6 @@
         private Button btnDailyTransaction;
         private Button btnMonthlyTransaction;
         private Button btnAddStock;
-        private Button button3;
+        private Button btnExit;
     }
 }

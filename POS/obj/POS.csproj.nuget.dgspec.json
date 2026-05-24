@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\POS.csproj": {}
+    "C:\\Users\\User\\Downloads\\h\\JJTDL\\POS\\POS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\POS.csproj": {
+    "C:\\Users\\User\\Downloads\\h\\JJTDL\\POS\\POS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\POS.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Downloads\\h\\JJTDL\\POS\\POS.csproj",
         "projectName": "POS",
-        "projectPath": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\POS.csproj",
-        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\Documents\\JJTDL\\JJTDL\\POS\\obj\\",
+        "projectPath": "C:\\Users\\User\\Downloads\\h\\JJTDL\\POS\\POS.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Downloads\\h\\JJTDL\\POS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0-windows"
@@ -77,7 +75,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

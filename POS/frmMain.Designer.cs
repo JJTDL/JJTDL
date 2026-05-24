@@ -32,9 +32,9 @@
             btnSignUp = new Button();
             btnLogin = new Button();
             btnClose = new Button();
-            pictureBox1 = new PictureBox();
+            picBxLogo = new PictureBox();
             btnRecover = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picBxLogo).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -47,7 +47,7 @@
             // 
             // btnSignUp
             // 
-            btnSignUp.BackColor = SystemColors.ActiveCaption;
+            btnSignUp.BackColor = Color.YellowGreen;
             btnSignUp.FlatStyle = FlatStyle.Flat;
             btnSignUp.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSignUp.Location = new Point(130, 361);
@@ -60,7 +60,7 @@
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = SystemColors.ActiveCaption;
+            btnLogin.BackColor = Color.YellowGreen;
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLogin.Location = new Point(12, 361);
@@ -73,7 +73,7 @@
             // 
             // btnClose
             // 
-            btnClose.BackColor = SystemColors.ActiveCaption;
+            btnClose.BackColor = Color.YellowGreen;
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnClose.Location = new Point(391, 361);
@@ -84,17 +84,20 @@
             btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
             // 
-            // pictureBox1
+            // picBxLogo
             // 
-            pictureBox1.Location = new Point(12, 11);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(491, 334);
-            pictureBox1.TabIndex = 10;
-            pictureBox1.TabStop = false;
+            picBxLogo.Image = Properties.Resources.LOGO;
+            picBxLogo.ImageLocation = "";
+            picBxLogo.Location = new Point(12, 11);
+            picBxLogo.Name = "picBxLogo";
+            picBxLogo.Size = new Size(491, 334);
+            picBxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            picBxLogo.TabIndex = 10;
+            picBxLogo.TabStop = false;
             // 
             // btnRecover
             // 
-            btnRecover.BackColor = SystemColors.ActiveCaption;
+            btnRecover.BackColor = Color.YellowGreen;
             btnRecover.FlatStyle = FlatStyle.Flat;
             btnRecover.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRecover.Location = new Point(248, 361);
@@ -109,19 +112,19 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(515, 432);
             Controls.Add(btnRecover);
-            Controls.Add(pictureBox1);
+            Controls.Add(picBxLogo);
             Controls.Add(btnClose);
             Controls.Add(btnLogin);
             Controls.Add(btnSignUp);
             Controls.Add(label2);
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmMain";
-            Text = "Form1";
+            Text = "Main";
             FormClosed += frmMain_FormClosed;
-            Load += frmMain_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBxLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -131,7 +134,7 @@
         private Button btnSignUp;
         private Button btnLogin;
         private Button btnClose;
-        private PictureBox pictureBox1;
+        private PictureBox picBxLogo;
         private Button btnRecover;
     }
 }

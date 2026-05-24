@@ -31,69 +31,98 @@
             grdvStock = new DataGridView();
             textBox1 = new TextBox();
             grdselectedstock = new DataGridView();
-            button1 = new Button();
+            btnSell = new Button();
             salexitbtn = new Button();
+            lblSearch = new Label();
             ((System.ComponentModel.ISupportInitialize)grdvStock).BeginInit();
             ((System.ComponentModel.ISupportInitialize)grdselectedstock).BeginInit();
             SuspendLayout();
             // 
             // grdvStock
             // 
+            grdvStock.BackgroundColor = SystemColors.ActiveCaption;
             grdvStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grdvStock.Location = new Point(21, 58);
+            grdvStock.Location = new Point(24, 77);
+            grdvStock.Margin = new Padding(3, 4, 3, 4);
             grdvStock.Name = "grdvStock";
-            grdvStock.Size = new Size(740, 176);
+            grdvStock.RowHeadersWidth = 51;
+            grdvStock.Size = new Size(579, 235);
             grdvStock.TabIndex = 0;
-            grdvStock.CellContentClick += grdvStock_CellContentClick;
-            grdvStock.CellContentDoubleClick += grdvStock_CellContentDoubleClick;
             grdvStock.CellDoubleClick += grdvStock_CellDoubleClick;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(21, 29);
+            textBox1.BackColor = SystemColors.InactiveCaption;
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Location = new Point(24, 39);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(403, 23);
+            textBox1.Size = new Size(460, 27);
             textBox1.TabIndex = 1;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // grdselectedstock
             // 
+            grdselectedstock.BackgroundColor = SystemColors.ActiveCaption;
             grdselectedstock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grdselectedstock.Location = new Point(21, 344);
+            grdselectedstock.Location = new Point(24, 320);
+            grdselectedstock.Margin = new Padding(3, 4, 3, 4);
             grdselectedstock.Name = "grdselectedstock";
-            grdselectedstock.Size = new Size(740, 198);
+            grdselectedstock.RowHeadersWidth = 51;
+            grdselectedstock.Size = new Size(579, 264);
             grdselectedstock.TabIndex = 2;
             // 
-            // button1
+            // btnSell
             // 
-            button1.Location = new Point(565, 582);
-            button1.Name = "button1";
-            button1.Size = new Size(101, 26);
-            button1.TabIndex = 3;
-            button1.Text = "Sell Stock";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            btnSell.BackColor = SystemColors.ActiveCaption;
+            btnSell.FlatStyle = FlatStyle.Flat;
+            btnSell.Location = new Point(380, 594);
+            btnSell.Margin = new Padding(3, 4, 3, 4);
+            btnSell.Name = "btnSell";
+            btnSell.Size = new Size(115, 35);
+            btnSell.TabIndex = 3;
+            btnSell.Text = "Sell Stock";
+            btnSell.UseVisualStyleBackColor = false;
+            btnSell.Click += btnSell_Click;
             // 
             // salexitbtn
             // 
-            salexitbtn.Location = new Point(672, 584);
+            salexitbtn.BackColor = SystemColors.ActiveCaption;
+            salexitbtn.FlatStyle = FlatStyle.Flat;
+            salexitbtn.Location = new Point(501, 596);
+            salexitbtn.Margin = new Padding(3, 4, 3, 4);
             salexitbtn.Name = "salexitbtn";
-            salexitbtn.Size = new Size(89, 23);
+            salexitbtn.Size = new Size(102, 31);
             salexitbtn.TabIndex = 4;
             salexitbtn.Text = "Exit Sale";
-            salexitbtn.UseVisualStyleBackColor = true;
+            salexitbtn.UseVisualStyleBackColor = false;
             salexitbtn.Click += salexitbtn_Click;
+            // 
+            // lblSearch
+            // 
+            lblSearch.AutoSize = true;
+            lblSearch.BackColor = SystemColors.ActiveCaptionText;
+            lblSearch.ForeColor = SystemColors.ControlLightLight;
+            lblSearch.Location = new Point(22, 7);
+            lblSearch.Name = "lblSearch";
+            lblSearch.Size = new Size(113, 20);
+            lblSearch.TabIndex = 5;
+            lblSearch.Text = "Search for Item:";
             // 
             // Salebox
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 635);
+            BackgroundImage = Properties.Resources.Background_image;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(620, 639);
+            Controls.Add(lblSearch);
             Controls.Add(salexitbtn);
-            Controls.Add(button1);
+            Controls.Add(btnSell);
             Controls.Add(grdselectedstock);
             Controls.Add(textBox1);
             Controls.Add(grdvStock);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Salebox";
             Text = "Salebox";
             Load += Salebox_Load;
@@ -108,7 +137,8 @@
         private DataGridView grdvStock;
         private TextBox textBox1;
         private DataGridView grdselectedstock;
-        private Button button1;
+        private Button btnSell;
         private Button salexitbtn;
+        private Label lblSearch;
     }
 }

@@ -28,22 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtUserName = new TextBox();
+            txtEmail = new TextBox();
             lblStudNum = new Label();
             lblPass = new Label();
             btnSubmit = new Button();
             SuspendLayout();
             // 
-            // txtUserName
+            // txtEmail
             // 
-            txtUserName.Location = new Point(21, 50);
-            txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(261, 27);
-            txtUserName.TabIndex = 10;
+            txtEmail.BackColor = SystemColors.ActiveCaption;
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
+            txtEmail.Location = new Point(21, 50);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(219, 27);
+            txtEmail.TabIndex = 10;
             // 
             // lblStudNum
             // 
             lblStudNum.AutoSize = true;
+            lblStudNum.BackColor = SystemColors.ActiveCaptionText;
+            lblStudNum.ForeColor = SystemColors.ControlLightLight;
             lblStudNum.Location = new Point(22, 17);
             lblStudNum.Name = "lblStudNum";
             lblStudNum.Size = new Size(218, 20);
@@ -63,9 +67,9 @@
             btnSubmit.BackColor = SystemColors.ActiveCaption;
             btnSubmit.FlatStyle = FlatStyle.Flat;
             btnSubmit.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSubmit.Location = new Point(22, 93);
+            btnSubmit.Location = new Point(109, 83);
             btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(174, 48);
+            btnSubmit.Size = new Size(131, 41);
             btnSubmit.TabIndex = 11;
             btnSubmit.Text = "&Submit";
             btnSubmit.UseVisualStyleBackColor = false;
@@ -75,9 +79,11 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(327, 183);
+            BackgroundImage = Properties.Resources.Background_image;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(256, 144);
             Controls.Add(btnSubmit);
-            Controls.Add(txtUserName);
+            Controls.Add(txtEmail);
             Controls.Add(lblStudNum);
             Controls.Add(lblPass);
             Name = "frmRecover";
@@ -89,7 +95,7 @@
 
         #endregion
 
-        private TextBox txtUserName;
+        private TextBox txtEmail;
         private Label lblStudNum;
         private Label lblPass;
         private Button btnSubmit;
