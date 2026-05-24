@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LedgerFlow — POS & Banking Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #0a0a0f;
+    --paper: #f5f2eb;
+    --gold: #c9a84c;
+    --gold-light: #e8c96a;
+    --teal: #1a7a6e;
+    --teal-light: #27b89f;
+    --red: #c0392b;
+    --muted: #6b6659;
+    --border: rgba(10,10,15,0.12);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Syne', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.6;
+  }
+
+  /* ── NAV ── */
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.4rem 4rem;
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0;
+    background: rgba(245,242,235,0.92);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+  .logo {
+    font-size: 1.35rem; font-weight: 800; letter-spacing: -0.03em;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .logo-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); display: inline-block; }
+  .nav-pill {
+    background: var(--ink); color: var(--paper);
+    padding: 0.6rem 1.5rem; border-radius: 2rem;
+    font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em;
+    text-decoration: none; cursor: pointer; border: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .nav-pill:hover { background: var(--teal); transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 90vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 5rem 4rem 4rem;
+    gap: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Large decorative rule */
+  .hero::before {
+    content: '';
+    position: absolute;
+    right: -80px; top: -80px;
+    width: 520px; height: 520px;
+    border-radius: 50%;
+    border: 80px solid rgba(201,168,76,0.12);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: 60px; top: 60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    border: 2px dashed rgba(201,168,76,0.35);
+    pointer-events: none;
+    animation: spin 40s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.18em;
+    color: var(--teal); text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 28px; height: 1px; background: var(--teal);
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.6rem;
+  }
+  h1 em {
+    font-style: normal;
+    color: var(--gold);
+    position: relative;
+  }
+  h1 em::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 4px;
+    width: 100%; height: 3px;
+    background: var(--gold);
+    opacity: 0.4;
+  }
+
+  .hero-desc {
+    font-size: 1.05rem; line-height: 1.7;
+    color: var(--muted);
+    max-width: 440px;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+  }
+
+  .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+  .btn-primary {
+    background: var(--ink); color: var(--paper);
+    padding: 0.95rem 2rem; border-radius: 0.25rem;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.9rem; font-weight: 700; letter-spacing: 0.02em;
+    border: none; cursor: pointer; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: all 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .btn-primary::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: var(--teal);
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  .btn-primary:hover::before { transform: translateY(0); }
+  .btn-primary span { position: relative; z-index: 1; }
+
+  .btn-outline {
+    background: transparent; color: var(--ink);
+    padding: 0.95rem 2rem; border-radius: 0.25rem;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.9rem; font-weight: 600;
+    border: 1.5px solid var(--border); cursor: pointer; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--ink); background: rgba(10,10,15,0.04); }
+
+  /* ── HERO VISUAL ── */
+  .hero-visual {
+    position: relative;
+    display: flex; flex-direction: column; gap: 1rem;
+    animation: floatUp 0.9s cubic-bezier(0.4,0,0.2,1) both;
+    animation-delay: 0.2s;
+  }
+  @keyframes floatUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .mock-card {
+    background: var(--ink); color: var(--paper);
+    border-radius: 0.75rem; padding: 1.5rem;
+    position: relative; overflow: hidden;
+  }
+  .mock-card::after {
+    content: '';
+    position: absolute; top: -30px; right: -30px;
+    width: 120px; height: 120px; border-radius: 50%;
+    background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+    opacity: 0.15;
+  }
+  .mock-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.14em;
+    color: var(--gold); text-transform: uppercase; margin-bottom: 0.8rem;
+  }
+  .mock-amount { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; }
+  .mock-sub { font-size: 0.75rem; color: rgba(245,242,235,0.5); margin-top: 0.3rem; }
+
+  .mock-row { display: flex; gap: 0.75rem; }
+  .mock-mini {
+    flex: 1; background: white;
+    border: 1px solid var(--border);
+    border-radius: 0.6rem; padding: 1rem;
+  }
+  .mock-mini-label { font-size: 0.65rem; color: var(--muted); font-family: 'DM Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; }
+  .mock-mini-val { font-size: 1.15rem; font-weight: 700; margin-top: 0.3rem; }
+  .mock-mini-val.green { color: var(--teal); }
+  .mock-mini-val.gold { color: var(--gold); }
+
+  .mock-txn {
+    background: white; border: 1px solid var(--border);
+    border-radius: 0.6rem; padding: 1rem 1.2rem;
+    display: flex; flex-direction: column; gap: 0.5rem;
+  }
+  .txn-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.45rem 0; border-bottom: 1px solid var(--border);
+    font-size: 0.8rem;
+  }
+  .txn-row:last-child { border-bottom: none; }
+  .txn-name { font-weight: 600; }
+  .txn-time { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); }
+  .txn-amt { font-weight: 700; font-family: 'DM Mono', monospace; }
+  .txn-amt.pos { color: var(--teal); }
+
+  /* ── FEATURES STRIP ── */
+  .strip {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 1.2rem 4rem;
+    display: flex; gap: 3rem; overflow-x: auto;
+    background: var(--ink); color: var(--paper);
+  }
+  .strip-item {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;
+    white-space: nowrap; opacity: 0.85;
+  }
+  .strip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+  /* ── SECTIONS ── */
+  section { padding: 5rem 4rem; }
+
+  .section-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 0.8rem;
+  }
+  h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 800; letter-spacing: -0.03em;
+    line-height: 1.1; margin-bottom: 1rem;
+  }
+
+  /* ── MODULES GRID ── */
+  .modules {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2px; margin-top: 3rem;
+    border: 2px solid var(--ink);
+    border-radius: 0.75rem; overflow: hidden;
+  }
+  .module-card {
+    padding: 2.5rem 2rem;
+    background: white;
+    position: relative; overflow: hidden;
+    transition: background 0.25s;
+  }
+  .module-card:hover { background: var(--paper); }
+  .module-card:nth-child(odd) { border-right: 2px solid var(--ink); }
+  .module-card + .module-card { border-top: 2px solid var(--ink); }
+  .module-card:nth-child(2) { border-top: none; }
+
+  .module-icon {
+    width: 44px; height: 44px; border-radius: 0.5rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; margin-bottom: 1.2rem;
+  }
+  .icon-teal { background: rgba(26,122,110,0.1); }
+  .icon-gold { background: rgba(201,168,76,0.12); }
+  .icon-ink { background: rgba(10,10,15,0.07); }
+
+  .module-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; }
+  .module-card p { font-size: 0.85rem; line-height: 1.65; color: var(--muted); }
+
+  .module-tag {
+    position: absolute; top: 1.2rem; right: 1.2rem;
+    font-family: 'DM Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.25rem 0.6rem; border-radius: 2rem;
+    background: var(--ink); color: var(--paper);
+  }
+  .module-tag.teal { background: var(--teal); }
+  .module-tag.gold { background: var(--gold); color: var(--ink); }
+
+  /* ── DOWNLOAD ── */
+  #download {
+    background: var(--ink); color: var(--paper);
+    border-radius: 1rem; margin: 0 2rem;
+    position: relative; overflow: hidden;
+  }
+  #download::before {
+    content: 'LEDGERFLOW';
+    position: absolute; right: -1rem; bottom: -2rem;
+    font-size: 9rem; font-weight: 800; letter-spacing: -0.05em;
+    color: rgba(255,255,255,0.03); pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .download-inner {
+    display: grid; grid-template-columns: 1fr auto;
+    align-items: center; gap: 3rem;
+    padding: 4rem;
+  }
+  .download-desc { font-size: 0.95rem; line-height: 1.7; color: rgba(245,242,235,0.6); margin-top: 1rem; max-width: 520px; }
+
+  .download-cards { display: flex; flex-direction: column; gap: 0.75rem; min-width: 260px; }
+  .dl-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 0.6rem; padding: 1.1rem 1.4rem;
+    display: flex; align-items: center; gap: 1rem;
+    cursor: pointer; text-decoration: none;
+    transition: all 0.2s; color: var(--paper);
+  }
+  .dl-card:hover {
+    background: rgba(255,255,255,0.11);
+    border-color: var(--gold);
+    transform: translateX(-4px);
+  }
+  .dl-icon { font-size: 1.5rem; flex-shrink: 0; }
+  .dl-info { flex: 1; }
+  .dl-title { font-weight: 700; font-size: 0.88rem; }
+  .dl-sub { font-size: 0.68rem; color: rgba(245,242,235,0.45); font-family: 'DM Mono', monospace; margin-top: 0.15rem; }
+  .dl-arrow { font-size: 0.9rem; opacity: 0.4; }
+
+  .version-badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold-light);
+    font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em;
+    padding: 0.3rem 0.7rem; border-radius: 2rem; margin-bottom: 1rem;
+  }
+
+  /* ── ADDRESS / ABOUT ── */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: start;
+  }
+  .addr-block {
+    background: white; border: 1px solid var(--border);
+    border-radius: 0.75rem; padding: 2rem;
+    font-family: 'DM Mono', monospace; font-size: 0.8rem;
+    line-height: 2;
+  }
+  .addr-block strong { font-family: 'Syne', sans-serif; font-weight: 700; display: block; margin-bottom: 0.5rem; font-size: 0.9rem; }
+  .addr-item { color: var(--muted); }
+  .addr-item span { color: var(--ink); font-weight: 500; }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 4rem;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.75rem; color: var(--muted);
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* ── HERO ANIM ── */
+  .hero-left { animation: floatUp 0.8s cubic-bezier(0.4,0,0.2,1) both; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem; min-height: auto; }
+    .hero::after { display: none; }
+    section { padding: 3rem 1.5rem; }
+    .strip { padding: 1rem 1.5rem; }
+    .modules { grid-template-columns: 1fr; }
+    .module-card:nth-child(odd) { border-right: none; }
+    .module-card { border-top: 2px solid var(--ink) !important; }
+    .module-card:first-child { border-top: none !important; }
+    #download { margin: 0 0.5rem; }
+    .download-inner { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <span class="logo-dot"></span>
+    LedgerFlow
+  </div>
+  <a href="#download" class="nav-pill">Download MVP ↓</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding-top:4rem">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Point of Sale · Banking Dashboard</div>
+    <h1>Commerce &amp; capital, <em>unified</em></h1>
+    <p class="hero-desc">
+      LedgerFlow is a dual-sided platform: a fast POS terminal for recording every transaction, and a banker's dashboard giving full visibility over accounts, settlements, and cashflow in real time.
+    </p>
+    <div class="btn-group">
+      <a href="#download" class="btn-primary"><span>⬇ Get the MVP</span></a>
+      <a href="#features" class="btn-outline">See features →</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <!-- Balance card -->
+    <div class="mock-card">
+      <div class="mock-label">▸ Banker Dashboard · Live Balance</div>
+      <div class="mock-amount">R 248,930<span style="font-size:1rem;font-weight:400;opacity:.5">.00</span></div>
+      <div class="mock-sub">Total cleared funds · May 2026</div>
+    </div>
+
+    <!-- Mini stats -->
+    <div class="mock-row">
+      <div class="mock-mini">
+        <div class="mock-mini-label">Transactions</div>
+        <div class="mock-mini-val green">1,482</div>
+      </div>
+      <div class="mock-mini">
+        <div class="mock-mini-label">Avg Ticket</div>
+        <div class="mock-mini-val gold">R 168</div>
+      </div>
+      <div class="mock-mini">
+        <div class="mock-mini-label">Pending</div>
+        <div class="mock-mini-val">12</div>
+      </div>
+    </div>
+
+    <!-- Recent transactions -->
+    <div class="mock-txn">
+      <div style="font-size:.7rem;font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem">▸ POS · Recent Transactions</div>
+      <div class="txn-row">
+        <div><div class="txn-name">Table 4 — Lunch</div><div class="txn-time">12:34 · Cash</div></div>
+        <div class="txn-amt pos">+R 320.00</div>
+      </div>
+      <div class="txn-row">
+        <div><div class="txn-name">Retail — Groceries</div><div class="txn-time">12:18 · Card</div></div>
+        <div class="txn-amt pos">+R 87.50</div>
+      </div>
+      <div class="txn-row">
+        <div><div class="txn-name">Fuel Stop #3</div><div class="txn-time">11:55 · Card</div></div>
+        <div class="txn-amt pos">+R 640.00</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-item"><span class="strip-dot"></span>Real-time transaction recording</div>
+  <div class="strip-item"><span class="strip-dot"></span>Banker analytics dashboard</div>
+  <div class="strip-item"><span class="strip-dot"></span>Cash &amp; card support</div>
+  <div class="strip-item"><span class="strip-dot"></span>Daily settlement reports</div>
+  <div class="strip-item"><span class="strip-dot"></span>Offline-capable POS</div>
+  <div class="strip-item"><span class="strip-dot"></span>Role-based access</div>
+  <div class="strip-item"><span class="strip-dot"></span>Export to CSV / PDF</div>
+</div>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="section-tag">// What's inside</div>
+  <h2>Two sides. One platform.</h2>
+  <p style="color:var(--muted);font-size:.95rem;max-width:540px;line-height:1.7;margin-bottom:0">
+    LedgerFlow MVP ships with a cashier-facing POS terminal and a banker-facing reporting dashboard — everything you need to start recording and reconciling from day one.
+  </p>
+
+  <div class="modules">
+    <!-- POS -->
+    <div class="module-card">
+      <span class="module-tag teal">POS Terminal</span>
+      <div class="module-icon icon-teal">🧾</div>
+      <h3>Fast Transaction Recording</h3>
+      <p>Cashiers log sales in seconds: item, amount, payment method (cash/card/transfer). Every sale is time-stamped and stored locally with sync to the central ledger.</p>
+    </div>
+
+    <div class="module-card">
+      <span class="module-tag teal">POS Terminal</span>
+      <div class="module-icon icon-teal">🗂</div>
+      <h3>Receipt &amp; Session History</h3>
+      <p>Drill into any transaction. Print or email receipts. Close daily sessions with a single tap — automatically locking that day's records for audit integrity.</p>
+    </div>
+
+    <!-- BANKER -->
+    <div class="module-card">
+      <span class="module-tag gold">Banker Side</span>
+      <div class="module-icon icon-gold">📊</div>
+      <h3>Live Financial Dashboard</h3>
+      <p>Bankers see total balance, daily/weekly revenue trends, average ticket size, and pending settlements — updated as each transaction lands.</p>
+    </div>
+
+    <div class="module-card">
+      <span class="module-tag gold">Banker Side</span>
+      <div class="module-icon icon-gold">📤</div>
+      <h3>Settlement &amp; Reporting</h3>
+      <p>Run end-of-day reconciliation reports, flag discrepancies, and export clean CSV or PDF summaries for accounting — no spreadsheet gymnastics needed.</p>
+    </div>
+
+    <!-- SHARED -->
+    <div class="module-card" style="grid-column:1/-1">
+      <span class="module-tag">Platform</span>
+      <div class="module-icon icon-ink">🔐</div>
+      <h3>Role-Based Access Control</h3>
+      <p>Cashier accounts see only the POS. Banker accounts unlock the full dashboard. Admin creates users and assigns roles — keeping sensitive financial data behind the right doors.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" style="padding:0 0 3rem">
+  <div id="download" style="background:var(--ink);color:var(--paper);border-radius:1rem;margin:0 2rem;position:relative;overflow:hidden">
+    <div style="position:absolute;right:-1rem;bottom:-2rem;font-size:9rem;font-weight:800;letter-spacing:-.05em;color:rgba(255,255,255,.03);pointer-events:none;white-space:nowrap;font-family:'Syne',sans-serif">LEDGERFLOW</div>
+    <div class="download-inner">
+      <div>
+        <div class="version-badge">⬡ v1.0.0 MVP · May 2026</div>
+        <h2 style="color:var(--paper)">Download &amp; run<br>LedgerFlow today</h2>
+        <p class="download-desc">
+          The MVP is a self-contained web application. Unzip, open your terminal in the folder, run the setup command, and you'll have a live POS + banking dashboard running on your local network in under 3 minutes. No cloud account required.
+        </p>
+        <div style="margin-top:1.5rem;font-family:'DM Mono',monospace;font-size:.75rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:.4rem;padding:.9rem 1.2rem;color:rgba(245,242,235,.7);display:inline-block">
+          <span style="color:var(--gold-light)">$</span> npm install &amp;&amp; npm run dev
+        </div>
+      </div>
+
+      <div class="download-cards">
+        <a href="#" class="dl-card" onclick="alert('Download would start here — replace with your real file URL.')">
+          <div class="dl-icon">🖥</div>
+          <div class="dl-info">
+            <div class="dl-title">Full Source Code</div>
+            <div class="dl-sub">ledgerflow-mvp-v1.0.0.zip · ~4.2 MB</div>
+          </div>
+          <div class="dl-arrow">→</div>
+        </a>
+
+        <a href="#" class="dl-card" onclick="alert('Docker image download — replace with your real registry URL.')">
+          <div class="dl-icon">🐳</div>
+          <div class="dl-info">
+            <div class="dl-title">Docker Image</div>
+            <div class="dl-sub">docker pull ledgerflow/mvp:1.0.0</div>
+          </div>
+          <div class="dl-arrow">→</div>
+        </a>
+
+        <a href="#" class="dl-card" onclick="alert('PDF docs download — replace with your real file URL.')">
+          <div class="dl-icon">📄</div>
+          <div class="dl-info">
+            <div class="dl-title">Setup Guide (PDF)</div>
+            <div class="dl-sub">ledgerflow-setup-guide.pdf · 380 KB</div>
+          </div>
+          <div class="dl-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADDRESS & ABOUT -->
+<section>
+  <div class="section-tag">// App address &amp; info</div>
+  <h2>Where to find it</h2>
+
+  <div class="about-grid" style="margin-top:2rem">
+    <div>
+      <p style="font-size:.95rem;line-height:1.8;color:var(--muted);margin-bottom:1.5rem">
+        Once installed, LedgerFlow runs as a local web server. Access the POS terminal and the banker dashboard from any device on the same network using the addresses below. No internet connection required during operation.
+      </p>
+      <p style="font-size:.95rem;line-height:1.8;color:var(--muted)">
+        For production deployment, point your domain's DNS to your server IP and configure the included <code style="font-family:'DM Mono',monospace;font-size:.82rem;background:rgba(10,10,15,.07);padding:.1rem .3rem;border-radius:.2rem">nginx.conf</code>. Full instructions are in the setup guide PDF.
+      </p>
+    </div>
+
+    <div class="addr-block">
+      <strong>Default Local Addresses</strong>
+      <div class="addr-item">POS Terminal &nbsp;&nbsp;&nbsp;<span>http://localhost:3000/pos</span></div>
+      <div class="addr-item">Banker Dashboard<span style="margin-left:.4rem">http://localhost:3000/banker</span></div>
+      <div class="addr-item">Admin Panel &nbsp;&nbsp;&nbsp;&nbsp;<span>http://localhost:3000/admin</span></div>
+      <div class="addr-item">API Docs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>http://localhost:3000/api</span></div>
+      <br/>
+      <strong>Default Credentials (change immediately)</strong>
+      <div class="addr-item">Admin &nbsp;&nbsp;&nbsp;&nbsp;<span>admin / changeme123</span></div>
+      <div class="addr-item">Cashier &nbsp;&nbsp;<span>cashier / changeme123</span></div>
+      <div class="addr-item">Banker &nbsp;&nbsp;&nbsp;<span>banker / changeme123</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 LedgerFlow · MVP v1.0.0</span>
+  <span>Built for retail, hospitality &amp; community banking</span>
+  <span>Free &amp; open source</span>
+</footer>
+
+</body>
+</html>
